@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.caixy.adminSystem.mapper.TasksMapper">
+
+    <resultMap id="BaseResultMap" type="com.caixy.adminSystem.model.entity.Tasks">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="dirId" column="dirId" jdbcType="VARCHAR"/>
+            <result property="userid" column="userID" jdbcType="BIGINT"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="date" column="date" jdbcType="TIMESTAMP"/>
+            <result property="completed" column="completed" jdbcType="TINYINT"/>
+            <result property="important" column="important" jdbcType="TINYINT"/>
+            <result property="alarm" column="alarm" jdbcType="TINYINT"/>
+            <result property="createdAt" column="created_at" jdbcType="TIMESTAMP"/>
+            <result property="updatedAt" column="updated_at" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,dir,
+        userID,description,date,
+        completed,important,alarm,
+        created_at,updated_at
+    </sql>
+</mapper>
